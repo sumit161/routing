@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-8 offset-sm-2">
+    <div class="form-group">
+      <label for="pname">Product Name</label>
+      <input type="text"  [disabled]="canEdit" #pname value="{{SelectedProduct.Pname}}"  class="form-control" id="pname" />
+    </div>
+    <div class="form-group">
+      <label for="">Pstatus</label>
+      <select name="" [disabled]="canEdit" #pstatus [value]="SelectedProduct.Pstatus" class="form-control" id="">
+        <option value="In progress">In Progress</option>
+        <option value="Delevered">In Delevered</option>
+        <option value="In dispached">In dispached</option>
+      </select>
+    </div>
+    <div class="text-right">
+      <button class="btn btn-primary" (click)="OnUpdate(pname,pstatus)">update Product</button>
+    </div>
+  </div>
+</div>
+<!-- SelectedProduct -->

@@ -1,0 +1,70 @@
+<!-- <app-users></app-users>
+  <app-products></app-products> -->
+<app-navbar></app-navbar>
+<div class="container mt-4">
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<hr style="border: 2px solid red" />
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h6>using click event and boolean Property</h6>
+      <li
+        class="nav-item dropdown"
+        [ngClass]="{ show: !isValue }"
+        (click)="this.isValue = !this.isValue"
+      >
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown
+        </a>
+
+        <div
+          class="dropdown-menu"
+          [ngClass]="{ show: isValue }"
+          aria-labelledby="navbarDropdown"
+        >
+          <a class="dropdown-item">Action</a>
+          <a class="dropdown-item">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item">Something else here</a>
+        </div>
+      </li>
+    </div>
+
+  second method
+
+    <div class="col-sm-4">
+      <h6>using directive</h6>
+      <li class="nav-item dropdown" appDropdown [Property]="'show'">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item">Action</a>
+          <a class="dropdown-item">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item">Something else here</a>
+        </div>
+      </li>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,103 @@
+<div class="main d-flex">
+  <div class="card form">
+    <div class="card-body">
+      <!-- login section -->
+      <div class="login" *ngIf="IsHavingAccount">
+        <!-- heading -->
+        <h3 class="mb-2">LogIn</h3>
+        <!--  login username input-->
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            #username
+            class="form-control"
+            placeholder="username"
+          />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa-solid fa-at"></i>
+            </span>
+          </div>
+        </div>
+        <!--  login passord input-->
+        <div class="input-group mb-3">
+          <input
+            #password
+            type="{{IsLock?'password':'text'}}"
+            class="form-control"
+            placeholder="password"
+            aria-label="password"
+            aria-describedby="basic-addon1"
+          />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa-solid" (click)="IsLock=!IsLock" [ngClass]="{'fa-lock': IsLock,'fa-unlock':!IsLock}"></i>
+            </span>
+          </div>
+        </div>
+        <!--  login button-->
+        <div class="text-right">
+          <button class="btn btn-primary" (click)="Onlogin(username, password)">
+            logIn
+          </button>
+        </div>
+      </div>
+      <!-- end login section -->
+      <!-- signup section -->
+
+      <div class="signUp" *ngIf="!IsHavingAccount">
+        <!--signUp heading section -->
+        <h3 class="mb-2">SignUp</h3>
+        <!--  Signup username input-->
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="username" />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa-solid fa-at"></i>
+            </span>
+          </div>
+        </div>
+        <!--  signup password input-->
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="password"
+            aria-label="password"
+            aria-describedby="basic-addon1"
+          />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+          </div>
+        </div>
+        <!--  signup  confirm password input-->
+
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="confirm password"
+            aria-label="password"
+            aria-describedby="basic-addon1"
+          />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+          </div>
+        </div>
+        <!--  signup create button-->
+
+        <div class="text-right">
+          <button class="btn btn-primary">Create Account</button>
+        </div>
+      </div>
+      <!-- messege Section -->
+      <p>
+        <a href="javascript:;" (click)="IsHavingAccount = !IsHavingAccount">{{ IsHavingAccount ? "Dont have account" : "Allready have a account" }}</a>
+      </p>
+    </div>
+  </div>
+</div>

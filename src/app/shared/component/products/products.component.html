@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="list-group">
+        <li class="list-group-item"
+        [routerLink]="['/products',item.Pid]"
+        [queryParams]="{canEdit:item.canReturn}"
+         [ngClass]="{active:item.Pid===selectedProductId}"
+          *ngFor="let item of productsinfo"  >
+        {{ item.Pname }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-8">
+      <router-outlet></router-outlet>
+
+      <!-- <app-product></app-product> [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"-->
+      <hr>
+      <!-- <button class="btn btn-primary m-2" (click)="OnProductclick()">go to Users</button>
+      <a routerLink="/users" class="btn btn-primary">Go to users using template</a> -->
+    </div>
+  </div>
+</div>

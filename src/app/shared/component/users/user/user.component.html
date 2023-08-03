@@ -1,0 +1,15 @@
+<p>The username is {{ userObject.username }}</p>
+<p>Userid of this User is {{ userObject.id }}</p>
+<a href="javascript" [routerLink]="['/users', 3]"> load july </a>
+<!-- <button
+  class="btn btn-primary"
+  [routerLink]="['/users', userObject.id, 'editUser']"
+>
+  edit users
+</button> -->
+<button
+  class="btn btn-primary"
+(click)="gOToUpdate()"
+>
+  edit users
+</button>

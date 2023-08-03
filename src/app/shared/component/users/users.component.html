@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          [queryParams]="{ CanEdit: item.userRole}"
+          [routerLink]="['/users', item.id]"
+          [ngClass]="{ active: 2 === item.id }"
+          *ngFor="let item of userInfo"
+
+        >
+          {{ item.username }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

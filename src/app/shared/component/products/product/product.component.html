@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{ productObj.Pname }}</h3>
+  </div>
+  <div class="card-body">
+    <p>
+      The Product is {{ productObj.Pname }} and its status is in{{
+        productObj.Pstatus
+      }}
+    </p>
+    <!-- { path: 'products/:id/edit', component: EditProductComponent },//7/05 -->
+    <!-- <button class="btn btn-primary"
+    [routerLink]="['/products',productObj.Pid,'edit']">Edit Product</button> -->
+    <button class="btn btn-primary"
+   (click)="goToEditProd()">Edit Product</button>
+  </div>
+</div>
